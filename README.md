@@ -1,6 +1,6 @@
-# 🐶 Dog Breed Classification with ResNet
+# 🐶 Dog Breed Classification with VGG19
 
-This project is a **Computer Vision application** that classifies dog images into **70 different breeds** using **Transfer Learning with ResNet50**.  
+This project is a **Computer Vision application** that classifies dog images into **70 different breeds** using **Transfer Learning with VGG19**.  
 It includes data preprocessing, model training, evaluation, and a **Streamlit app** for easy deployment.
 
 ---
