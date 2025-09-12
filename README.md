@@ -1,11 +1,11 @@
-# 🐶 Dog Breed Classification with VGG19
+#  Dog Breed Classification with VGG19
 
 This project is a **Computer Vision application** that classifies dog images into **70 different breeds** using **Transfer Learning with VGG19**.  
 It includes data preprocessing, model training, evaluation, and a **Streamlit app** for easy deployment.
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 ```
 
 ├── App.py                 # Streamlit app for deployment
@@ -20,7 +20,7 @@ It includes data preprocessing, model training, evaluation, and a **Streamlit ap
 
 ---
 
-## ⚙️ Installation
+##   Installation
 Clone the repository and install dependencies:
 
 ```bash
@@ -31,7 +31,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 Usage
+##  Usage
 
 1. Run the Streamlit app:
 
@@ -43,7 +43,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🧠 Model Details
+##  Model Details
 
 * **Base model:** ResNet50 (pretrained on ImageNet)
 * **Top layers:** GlobalAveragePooling + Dense(512, ReLU) + Dense(70, Softmax)
@@ -52,14 +52,14 @@ pip install -r requirements.txt
 
 ---
 
-## 📊 Results
+##  Results
 
 * Accuracy improves significantly with data augmentation and fine-tuning.
 * The model achieves good generalization on unseen images.
 
 ---
 
-## 🎯 Future Work
+##  Future Work
 
 * Add more breeds to the dataset.
 * Optimize training with learning rate schedules.
@@ -67,7 +67,7 @@ pip install -r requirements.txt
 
 ---
 
-## 📌 Requirements
+##  Requirements
 
 * Python 3.8+
 * TensorFlow / Keras
