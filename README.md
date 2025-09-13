@@ -5,7 +5,7 @@ It includes data preprocessing, model training, evaluation, and a **Streamlit ap
 
 ---
 
-##  Project Structure
+##  ProjectSS
 ```
 
 ├── App.py                 # Streamlit app for deployment
