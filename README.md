@@ -3,24 +3,20 @@
 This project is a Computer Vision application that classifies dog images into 70 different breeds using Transfer Learning with EfficientNetB0.
 It includes data preprocessing, model training, evaluation, and a Streamlit app for easy deployment.
 
-------------------------------------------------------------
+---
 ## Project Structure
-------------------------------------------------------------
+
 ├── App.py               # Streamlit app for deployment
 ├── dog_project.keras    # Trained EfficientNetB0 model (saved)
 ├── data/                # Dataset (train/valid images)
 │   ├── train/
 │   └── valid/
-└── README.txt           # Project documentation
-
-------------------------------------------------------------
+└── README.md 
 ## Installation
-------------------------------------------------------------
+---
 Clone the repository and install dependencies:
 
 git clone https://github.com/mennareda123/dog-breed-classification.git
-cd dog-breed-classification
-pip install -r requirements.txt
 
 
 ------------------------------------------------------------
@@ -46,7 +42,7 @@ pip install -r requirements.txt
 ------------------------------------------------------------
 You can run the training and prediction code directly on Google Colab:
 
-Open In Colab: [https://colab.research.google.com/drive/1nqY3A3nFuQ7U0F01ULT70LxA2rBGM1o8]
+Open In Colab: https://colab.research.google.com/drive/1nqY3A3nFuQ7U0F01ULT70LxA2rBGM1o8
 
 ------------------------------------------------------------
 ## Notes on Data & Preprocessing
