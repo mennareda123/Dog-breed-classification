@@ -1,82 +1,111 @@
-#  Dog Breed Classification with VGG19
+# 🐶 Dog Breed Classification with VGG19
 
-This project is a **Computer Vision application** that classifies dog images into **70 different breeds** using **Transfer Learning with VGG19**.  
-It includes data preprocessing, model training, evaluation, and a **Streamlit app** for easy deployment.
-
----
-
-##  ProjectSS
-```
-
-├── App.py                 # Streamlit app for deployment
-├── dog\_project.keras      # Trained model
-├── requirements.txt       # Dependencies
-├── data/                  # Dataset (train/valid images)
-│   ├── train/
-│   └── valid/
-└── README.md              # Project documentation
-
-````
+This project is a **Deep Learning application** that classifies dog images into **70 different breeds** using **Transfer Learning with VGG19**.  
+It includes data preprocessing, model training, evaluation, and a **Streamlit app** for deployment.
 
 ---
 
-##   Installation
-Clone the repository and install dependencies:
+## 📂 Project Structure
+├── App.py # Streamlit app for deployment
+├── dog_project.keras # Trained model
+├── requirements.txt # Dependencies
+├── README.md # Project documentation
+├── notebooks/ # Jupyter notebooks for training & experiments
+└── dataset/ # Dog breed dataset (images)
 
-```bash
-git clone https://github.com/USERNAME/dog-breed-classification.git
-cd dog-breed-classification
-pip install -r requirements.txt
-````
+yaml
+Copy code
 
 ---
 
-##  Usage
+## 🚀 Features
+- Preprocessing and augmentation of dog images.
+- Transfer Learning with **VGG19** pretrained on ImageNet.
+- Fine-tuning for **70 dog breeds**.
+- Model evaluation with accuracy, loss curves, and classification report.
+- **Streamlit app** for interactive prediction.
 
-1. Run the Streamlit app:
+---
 
+## ⚙️ Installation
+
+1. Clone the repository:
    ```bash
-   streamlit run App.py
-   ```
-2. Upload a dog image.
-3. The app will display the predicted breed from the 70 classes.
+   git clone https://github.com/yourusername/Dog-breed-classification.git
+   cd Dog-breed-classification
+Create and activate a virtual environment (optional but recommended):
 
----
+bash
+Copy code
+python -m venv venv
+source venv/bin/activate   # On Linux/Mac
+venv\Scripts\activate      # On Windows
+Install dependencies:
 
-##  Model Details
+bash
+Copy code
+pip install -r requirements.txt
+📊 Dataset
+The dataset consists of images of 70 dog breeds.
 
-* **Base model:** ResNet50 (pretrained on ImageNet)
-* **Top layers:** GlobalAveragePooling + Dense(512, ReLU) + Dense(70, Softmax)
-* **Loss function:** Categorical Crossentropy
-* **Optimizer:** Adam (lr=1e-4)
+Images are resized to 224×224 before feeding into the model.
 
----
+Data is split into training, validation, and test sets.
 
-##  Results
+🧠 Model
+Base Model: VGG19 (pretrained on ImageNet)
 
-* Accuracy improves significantly with data augmentation and fine-tuning.
-* The model achieves good generalization on unseen images.
+Modifications:
 
----
+Frozen convolutional base
 
-##  Future Work
+Added fully-connected layers for classification
 
-* Add more breeds to the dataset.
-* Optimize training with learning rate schedules.
-* Deploy the app on **Streamlit Cloud / Hugging Face Spaces**.
+Softmax output for 70 classes
 
----
+📈 Results
+Training & validation accuracy plotted during training.
 
-##  Requirements
+Final accuracy: ~XX% (replace with your actual result).
 
-* Python 3.8+
-* TensorFlow / Keras
-* Streamlit
-* Pandas, NumPy, Pillow
+Confusion matrix & classification report included in notebooks.
 
----
+🎮 Usage
+Run the Streamlit App
+bash
+Copy code
+streamlit run App.py
+Upload a dog image.
 
-## 👩‍💻 Author
+The model predicts the breed with probability score.
 
-Developed by **Menna Reda**
-🔗 [LinkedIn](https://www.linkedin.com/in/menna-reda-6048182a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
+🛠️ Requirements
+Main dependencies:
+
+Python 3.8+
+
+TensorFlow / Keras
+
+NumPy, Pandas
+
+Matplotlib, Seaborn
+
+Streamlit
+
+Pillow
+
+Full list in requirements.txt.
+
+📸 Demo
+(Add screenshots/gifs of your Streamlit app here for better presentation)
+
+🤝 Contributing
+Pull requests are welcome!
+For major changes, please open an issue first to discuss what you’d like to improve.
+
+📜 License
+This project is licensed under the MIT License.
+
+👩‍💻 Author
+Menna Reda
+🔗 LinkedIn | 🔗 GitHub
