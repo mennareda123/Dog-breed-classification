@@ -34,7 +34,7 @@ pip install -r requirements.txt
 
 1. Run the Streamlit app:
 ```bash
-streamlit run App.py
+streamlit run app.py
 ```
 
 2. Open the provided local URL in your browser (or use the ngrok link if deployed).  
