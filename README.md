@@ -1,111 +1,92 @@
-# 🐶 Dog Breed Classification with ResNet50
+# Dog Breed Classification with ResNet50
 
-This project is a **Deep Learning application** that classifies dog images into **70 different breeds** using **Transfer Learning with ResNet50**.  
-It includes data preprocessing, model training, evaluation, and a **Streamlit app** for deployment.
-
----
-
-## 📂 Project Structure
-├── App.py # Streamlit app for deployment
-├── dog_project.keras # Trained ResNet50 model
-├── requirements.txt # Dependencies
-├── README.md # Project documentation
-├── notebooks/ # Jupyter notebooks for training & experiments
-└── dataset/ # Dog breed dataset (images)
-
-yaml
-Copy code
+This project is a **Computer Vision application** that classifies dog images into **70 different breeds** using **Transfer Learning with ResNet50**.  
+It includes data preprocessing, model training, evaluation, and a **Streamlit app** for easy deployment.
 
 ---
 
-## 🚀 Features
-- Preprocessing and augmentation of dog images.
-- Transfer Learning with **ResNet50** pretrained on ImageNet.
-- Fine-tuning for **70 dog breeds**.
-- Model evaluation with accuracy, loss curves, and classification report.
-- **Streamlit app** for interactive prediction.
+## Project Structure
+```
+├── App.py               # Streamlit app for deployment
+├── dog_project.keras    # Trained ResNet50 model (saved)
+├── data/                # Dataset (train/valid images)
+│   ├── train/
+│   └── valid/
+└── README.md            # Project documentation
+```
 
 ---
 
-## ⚙️ Installation
+## Installation
+Clone the repository and install dependencies:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/mennareda123/Dog-breed-classification.git
-   cd Dog-breed-classification
-Create and activate a virtual environment (optional but recommended):
-
-bash
-Copy code
-python -m venv venv
-source venv/bin/activate   # On Linux/Mac
-venv\Scripts\activate      # On Windows
-Install dependencies:
-
-bash
-Copy code
+```bash
+git clone https://github.com/USERNAME/dog-breed-classification.git
+cd dog-breed-classification
 pip install -r requirements.txt
-📊 Dataset
-The dataset consists of images of 70 dog breeds.
+```
 
-Images are resized to 224×224 before feeding into the model.
+> Replace `USERNAME` with your GitHub username.
 
-Data is split into training, validation, and test sets.
+---
 
-🧠 Model
-Base Model: ResNet50 (pretrained on ImageNet)
+## Usage
 
-Modifications:
-
-Frozen convolutional base
-
-Added fully-connected layers for classification
-
-Softmax output for 70 classes
-
-📈 Results
-Training & validation accuracy plotted during training.
-
-Final accuracy: ~XX% (replace with your actual result).
-
-Confusion matrix & classification report included in notebooks.
-
-🎮 Usage
-Run the Streamlit App
-bash
-Copy code
+1. Run the Streamlit app:
+```bash
 streamlit run App.py
-Upload a dog image.
+```
 
-The model predicts the breed with probability score.
+2. Open the provided local URL in your browser (or use the ngrok link if deployed).  
+3. Upload a dog image — the app will predict the breed from the **70 available classes**.
 
-🛠️ Requirements
-Main dependencies:
+---
 
-Python 3.8+
+## Model Details
 
-TensorFlow / Keras
+- **Base model:** ResNet50 (pretrained on ImageNet)  
+- **Top layers:** GlobalAveragePooling → Dense(512, ReLU) → Dense(70, Softmax)  
+- **Loss function:** Categorical Crossentropy  
+- **Optimizer:** Adam (learning rate = 1e-4)  
+- **Training strategy:** transfer learning → freeze base weights, train top classifier; optionally fine-tune last N layers.
 
-NumPy, Pandas
+---
 
-Matplotlib, Seaborn
+## Notes on Data & Preprocessing
 
-Streamlit
+- Images resized to `224×224` (matching ResNet50 input).  
+- Use `ImageDataGenerator` for augmentation during training (rotation, shift, zoom, flip, brightness).  
+- `flow_from_dataframe` or `flow_from_directory` with `class_mode='categorical'` (70 classes).
 
-Pillow
+---
 
-Full list in requirements.txt.
+## Results & Tips
 
-📸 Demo
-(Add screenshots/gifs of your Streamlit app here for better presentation)
+- Use data augmentation and early stopping to improve generalization.  
+- If training on CPU is slow, try EfficientNetB0 or reduce input size to `160×160` for faster iteration.  
+- Save checkpoints with `model.save()` and reload with `tf.keras.models.load_model()` to resume training.
 
-🤝 Contributing
-Pull requests are welcome!
-For major changes, please open an issue first to discuss what you’d like to improve.
+---
 
-📜 License
-This project is licensed under the MIT License.
+## Future Work
 
-👩‍💻 Author
-Menna Reda
-🔗 LinkedIn | 🔗 GitHub
+- Add more breeds and balance classes.  
+- Use learning-rate scheduling and more aggressive fine-tuning.  
+- Deploy on Streamlit Cloud or Hugging Face Spaces for public use.
+
+---
+
+## Requirements (example)
+- Python 3.8+  
+- TensorFlow / Keras  
+- Streamlit  
+- pandas, numpy, Pillow
+
+(Provide an explicit `requirements.txt` in the repo for exact versions.)
+
+---
+
+## Author
+
+Developed by **Menna Reda**  
+LinkedIn: https://www.linkedin.com/in/menna-reda-6048182a3
