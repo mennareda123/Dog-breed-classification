@@ -6,12 +6,13 @@ It includes data preprocessing, model training, evaluation, and a Streamlit app 
 ---
 ## Project Structure
 
-├── App.py               # Streamlit app for deployment
-├── dog_project.keras    # Trained EfficientNetB0 model (saved)
-├── data/                # Dataset (train/valid images)
-│   ├── train/
-│   └── valid/
+├── App.py # Streamlit app for deployment
+├── dog_project.keras # Trained EfficientNetB0 model (saved)
+├── data/ # Dataset (train/valid images)
+│ ├── train/
+│ └── valid/
 └── README.md 
+---
 ## Installation
 ---
 Clone the repository and install dependencies:
