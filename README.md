@@ -1,13 +1,13 @@
-# 🐶 Dog Breed Classification with VGG19
+# 🐶 Dog Breed Classification with ResNet50
 
-This project is a **Deep Learning application** that classifies dog images into **70 different breeds** using **Transfer Learning with VGG19**.  
+This project is a **Deep Learning application** that classifies dog images into **70 different breeds** using **Transfer Learning with ResNet50**.  
 It includes data preprocessing, model training, evaluation, and a **Streamlit app** for deployment.
 
 ---
 
 ## 📂 Project Structure
 ├── App.py # Streamlit app for deployment
-├── dog_project.keras # Trained model
+├── dog_project.keras # Trained ResNet50 model
 ├── requirements.txt # Dependencies
 ├── README.md # Project documentation
 ├── notebooks/ # Jupyter notebooks for training & experiments
@@ -20,7 +20,7 @@ Copy code
 
 ## 🚀 Features
 - Preprocessing and augmentation of dog images.
-- Transfer Learning with **VGG19** pretrained on ImageNet.
+- Transfer Learning with **ResNet50** pretrained on ImageNet.
 - Fine-tuning for **70 dog breeds**.
 - Model evaluation with accuracy, loss curves, and classification report.
 - **Streamlit app** for interactive prediction.
@@ -31,7 +31,7 @@ Copy code
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/Dog-breed-classification.git
+   git clone https://github.com/mennareda123/Dog-breed-classification.git
    cd Dog-breed-classification
 Create and activate a virtual environment (optional but recommended):
 
@@ -53,7 +53,7 @@ Images are resized to 224×224 before feeding into the model.
 Data is split into training, validation, and test sets.
 
 🧠 Model
-Base Model: VGG19 (pretrained on ImageNet)
+Base Model: ResNet50 (pretrained on ImageNet)
 
 Modifications:
 
