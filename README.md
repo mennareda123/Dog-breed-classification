@@ -1,82 +1,62 @@
-#  Dog Breed Classification with VGG19
+```markdown
+#  Dog Breed Classification with ResNet50
 
-This project is a **Computer Vision application** that classifies dog images into **70 different breeds** using **Transfer Learning with VGG19**.  
-It includes data preprocessing, model training, evaluation, and a **Streamlit app** for easy deployment.
+This project is a **Computer Vision application** that classifies dog images into **70 different dog breeds** using **Transfer Learning with ResNet50**.  
+It covers **data preprocessing, model training, evaluation, and deployment** with a user-friendly **Streamlit app**.
 
 ---
 
-##  ProjectSS
+##  Project Structure
 ```
-
-├── App.py                 # Streamlit app for deployment
-├── dog\_project.keras      # Trained model
-├── requirements.txt       # Dependencies
-├── data/                  # Dataset (train/valid images)
+├── App.py               # Streamlit app for deployment
+├── dog_project.keras    # Trained ResNet50 model
+├── data/                # Dataset (train/valid images)
 │   ├── train/
 │   └── valid/
-└── README.md              # Project documentation
-
-````
-
----
-
-##   Installation
-Clone the repository and install dependencies:
-
-```bash
-git clone https://github.com/USERNAME/dog-breed-classification.git
-cd dog-breed-classification
-pip install -r requirements.txt
-````
+└── README.md            # Project documentation
+```
 
 ---
 
-##  Usage
+##  How to Use
 
 1. Run the Streamlit app:
 
    ```bash
    streamlit run App.py
    ```
-2. Upload a dog image.
-3. The app will display the predicted breed from the 70 classes.
+
+2. Upload a dog image.  
+3. The app will instantly predict the breed from the **70 available classes**.
 
 ---
 
 ##  Model Details
 
-* **Base model:** ResNet50 (pretrained on ImageNet)
-* **Top layers:** GlobalAveragePooling + Dense(512, ReLU) + Dense(70, Softmax)
-* **Loss function:** Categorical Crossentropy
-* **Optimizer:** Adam (lr=1e-4)
+- **Base model:** ResNet50 (pretrained on ImageNet)  
+- **Top layers:** GlobalAveragePooling → Dense(512, ReLU) → Dense(70, Softmax)  
+- **Loss function:** Categorical Crossentropy  
+- **Optimizer:** Adam (learning rate = 1e-4)  
 
 ---
 
 ##  Results
 
-* Accuracy improves significantly with data augmentation and fine-tuning.
-* The model achieves good generalization on unseen images.
+- With **data augmentation** and fine-tuning, the model improves accuracy significantly.  
+- The ResNet50 backbone helps achieve **robust generalization** on unseen dog images.  
 
 ---
 
-##  Future Work
+##  Future Improvements
 
-* Add more breeds to the dataset.
-* Optimize training with learning rate schedules.
-* Deploy the app on **Streamlit Cloud / Hugging Face Spaces**.
-
----
-
-##  Requirements
-
-* Python 3.8+
-* TensorFlow / Keras
-* Streamlit
-* Pandas, NumPy, Pillow
+- Add more breeds for even broader classification.  
+- Use learning rate schedules for faster convergence.  
+- Deploy the app on **Streamlit Cloud** or **Hugging Face Spaces** for public access.  
 
 ---
 
-## 👩‍💻 Author
+##  Author
 
-Developed by **Menna Reda**
-🔗 [LinkedIn](https://www.linkedin.com/in/menna-reda-6048182a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
+Developed by **Menna Reda**  
+🔗 [LinkedIn](https://www.linkedin.com/in/menna-reda-6048182a3)  
+```
