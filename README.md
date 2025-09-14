@@ -1,12 +1,12 @@
 ```markdown
-#  Dog Breed Classification with ResNet50
+# 🐶 Dog Breed Classification with ResNet50
 
 This project is a **Computer Vision application** that classifies dog images into **70 different dog breeds** using **Transfer Learning with ResNet50**.  
 It covers **data preprocessing, model training, evaluation, and deployment** with a user-friendly **Streamlit app**.
 
 ---
 
-##  Project Structure
+## 📂 Project Structure
 ```
 ├── App.py               # Streamlit app for deployment
 ├── dog_project.keras    # Trained ResNet50 model
@@ -18,7 +18,7 @@ It covers **data preprocessing, model training, evaluation, and deployment** wit
 
 ---
 
-##  How to Use
+## 🚀 How to Use
 
 1. Run the Streamlit app:
 
@@ -31,7 +31,7 @@ It covers **data preprocessing, model training, evaluation, and deployment** wit
 
 ---
 
-##  Model Details
+## 🧠 Model Details
 
 - **Base model:** ResNet50 (pretrained on ImageNet)  
 - **Top layers:** GlobalAveragePooling → Dense(512, ReLU) → Dense(70, Softmax)  
@@ -40,14 +40,14 @@ It covers **data preprocessing, model training, evaluation, and deployment** wit
 
 ---
 
-##  Results
+## 📊 Results
 
 - With **data augmentation** and fine-tuning, the model improves accuracy significantly.  
 - The ResNet50 backbone helps achieve **robust generalization** on unseen dog images.  
 
 ---
 
-##  Future Improvements
+## 🔮 Future Improvements
 
 - Add more breeds for even broader classification.  
 - Use learning rate schedules for faster convergence.  
@@ -55,7 +55,7 @@ It covers **data preprocessing, model training, evaluation, and deployment** wit
 
 ---
 
-##  Author
+## 👩‍💻 Author
 
 Developed by **Menna Reda**  
 🔗 [LinkedIn](https://www.linkedin.com/in/menna-reda-6048182a3)  
