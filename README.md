@@ -1,62 +1,53 @@
-```markdown
 # 🐶 Dog Breed Classification with ResNet50
 
-This project is a **Computer Vision application** that classifies dog images into **70 different dog breeds** using **Transfer Learning with ResNet50**.  
-It covers **data preprocessing, model training, evaluation, and deployment** with a user-friendly **Streamlit app**.
+This project is a **Computer Vision application** that classifies dog images into **70 different breeds** using **Transfer Learning with ResNet50**.  
+It includes data preprocessing, model training, evaluation, and a **Streamlit app** for easy deployment.
 
 ---
 
 ## 📂 Project Structure
-```
-├── App.py               # Streamlit app for deployment
-├── dog_project.keras    # Trained ResNet50 model
-├── data/                # Dataset (train/valid images)
-│   ├── train/
-│   └── valid/
-└── README.md            # Project documentation
-```
+├── App.py # Streamlit app for deployment
+├── dog_project.keras # Trained model
+├── data/ # Dataset (train/valid images)
+│ ├── train/
+│ └── valid/
+└── README.md # Project documentation
+
+yaml
+Copy code
 
 ---
 
-## 🚀 How to Use
+## 🚀 Usage
 
 1. Run the Streamlit app:
-
    ```bash
    streamlit run App.py
-   ```
+Upload a dog image.
 
-2. Upload a dog image.  
-3. The app will instantly predict the breed from the **70 available classes**.
+The app will display the predicted breed from the 70 classes.
 
----
+🧠 Model Details
+Base model: ResNet50 (pretrained on ImageNet)
 
-## 🧠 Model Details
+Top layers: GlobalAveragePooling + Dense(512, ReLU) + Dense(70, Softmax)
 
-- **Base model:** ResNet50 (pretrained on ImageNet)  
-- **Top layers:** GlobalAveragePooling → Dense(512, ReLU) → Dense(70, Softmax)  
-- **Loss function:** Categorical Crossentropy  
-- **Optimizer:** Adam (learning rate = 1e-4)  
+Loss function: Categorical Crossentropy
 
----
+Optimizer: Adam (lr=1e-4)
 
-## 📊 Results
+📊 Results
+Accuracy improves significantly with data augmentation and fine-tuning.
 
-- With **data augmentation** and fine-tuning, the model improves accuracy significantly.  
-- The ResNet50 backbone helps achieve **robust generalization** on unseen dog images.  
+The model achieves good generalization on unseen images.
 
----
+🔮 Future Work
+Add more breeds to the dataset.
 
-## 🔮 Future Improvements
+Optimize training with learning rate schedules.
 
-- Add more breeds for even broader classification.  
-- Use learning rate schedules for faster convergence.  
-- Deploy the app on **Streamlit Cloud** or **Hugging Face Spaces** for public access.  
+Deploy the app on Streamlit Cloud / Hugging Face Spaces.
 
----
-
-## 👩‍💻 Author
-
-Developed by **Menna Reda**  
-🔗 [LinkedIn](https://www.linkedin.com/in/menna-reda-6048182a3)  
-```
+👩‍💻 Author
+Developed by Menna Reda
+🔗 LinkedIn
